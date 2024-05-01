@@ -1,0 +1,7 @@
+<!-- glasses-catalog.fxml -->
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+    <!-- Разметка каталога очков -->
+    <!-- Добавьте здесь элементы интерфейса для отображения списка очков -->
+</VBox>
+
