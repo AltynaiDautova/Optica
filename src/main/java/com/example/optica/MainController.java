@@ -1,5 +1,6 @@
 package com.example.optica;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,14 +13,20 @@ public class MainController {
 
     @FXML
     protected void openGlassesCatalog() {
-        openCatalog("Glasses Catalog", "glasses-catalog.fxml");
+        katalog catalog = new katalog();
+        catalog.start(new Stage());
     }
 
     @FXML
-    protected void openAccessoriesCatalog() {
-        openCatalog("Accessories Catalog", "accessories-catalog.fxml");
+    protected void openCatalog() {
+        katalog catalog = new katalog();
+        catalog.start(new Stage());
     }
-
+    @FXML
+    protected void openAccessoriesCatalog() {
+        Accessories accessories = new Accessories();
+        accessories.start(new Stage());
+    }
     @FXML
     protected void openAppointmentBooking() {
         try {
@@ -27,17 +34,22 @@ public class MainController {
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Appointment Booking");
-            stage.setScene(new Scene(root));
+            double width = javafx.stage.Screen.getPrimary().getVisualBounds().getWidth() * 0.3;
+            double height = javafx.stage.Screen.getPrimary().getVisualBounds().getHeight() * 0.8;
+            stage.setScene(new Scene(root, width, height));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    @FXML
+    private void openCart(ActionEvent event) throws IOException {
+        CartPage cartPage = new CartPage();
+        cartPage.show();
+    }
     private void openCatalog(String title, String fxmlFile) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
-            Parent root = fxmlLoader.load();
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
             Stage stage = new Stage();
             stage.setTitle(title);
             stage.setScene(new Scene(root));

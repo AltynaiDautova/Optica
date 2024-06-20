@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optica.RegisterController" style="-fx-background-color: #f0f0f0; -fx-padding: 20; -fx-spacing: 10;">
+    <Label text="Registration" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    <TextField fx:id="usernameField" promptText="Username" style="-fx-pref-width: 200; -fx-pref-height: 40; -fx-font-size: 14;"/>
+    <PasswordField fx:id="passwordField" promptText="Password" style="-fx-pref-width: 200; -fx-pref-height: 40; -fx-font-size: 14;"/>
+    <TextField fx:id="emailField" promptText="Email" style="-fx-pref-width: 200; -fx-pref-height: 40; -fx-font-size: 14;"/>
+    <TextField fx:id="phoneField" promptText="Phone" style="-fx-pref-width: 200; -fx-pref-height: 40; -fx-font-size: 14;"/>
+    <ChoiceBox fx:id="genderChoiceBox" style="-fx-pref-width: 200; -fx-pref-height: 40; -fx-font-size: 14;">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Male"/>
+                <String fx:value="Female"/>
+                <String fx:value="Other"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Button text="Register" onAction="#handleRegister" style="-fx-pref-width: 100; -fx-pref-height: 40; -fx-font-size: 14; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5;"/>
+</VBox>
+

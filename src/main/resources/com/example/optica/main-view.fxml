@@ -10,7 +10,9 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Button text="Открыть каталог очков" onAction="#openGlassesCatalog"/>
-    <Button text="Открыть каталог аксессуаров" onAction="#openAccessoriesCatalog"/>
-    <Button text="Записаться к врачу" onAction="#openAppointmentBooking"/>
+    <Button text="Open Glasses Catalog" onAction="#openGlassesCatalog"/>
+    <Button text="Open Accessories Catalog" onAction="#openAccessoriesCatalog"/>
+    <Button text="Open Appointment Booking" onAction="#openAppointmentBooking"/>
+    <Button text="Open Cart" onAction="#openCart"/>
 </VBox>
+
